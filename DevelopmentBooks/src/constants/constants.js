@@ -36,5 +36,5 @@ export const constants = {
 	TEST_ID_CART_ITEM_QTY: "cartItemQuantity",
 	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
 
-	DISCOUNT_RULE: { 1: 0, 2: 5 },
+	DISCOUNT_RULE: { 1: 0, 2: 5, 3: 10 },
 };
