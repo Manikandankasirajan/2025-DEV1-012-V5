@@ -31,6 +31,8 @@ export const testConstants = {
 	TEST_ID_BOOK: "book",
 	TEST_ID_INCREASE_BOOK_QTY_BTN: "increaseBookQuantity",
 	TEST_ID_PLUS_ICON: "plusIcon",
+	TEST_ID_DECREASE_BOOK_QTY_BTN: "decreaseBookQuantity",
+	TEST_ID_MINUS_ICON: "minusIcon",
 
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
 	TEST_ID_ADD_TO_CART_BTN_BOOK2: "TEST_ID_The Clean Coder",
@@ -66,6 +68,14 @@ export const testConstants = {
 	DISCOUNT_PRICE_FOR_TWO_COPY_OF_SAME_BOOK: "₹0.00",
 	FINAL_PRICE_FOR_TWO_COPY_OF_SAME_BOOK: "₹100.00",
 
+	TOTAL_PRICE_FOR_TWO_COPY_OF_TWO_BOOK: "₹200.00",
+	DISCOUNT_PRICE_FOR_TWO_COPY_OF_TWO_BOOK: "₹10.00",
+	FINAL_PRICE_FOR_TWO_COPY_OF_TWO_BOOK: "₹190.00",
+
+	TOTAL_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY: "₹150.00",
+	DISCOUNT_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY: "₹5.00",
+	FINAL_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY: "₹145.00",
+
 	BOOK_TITLES: [
 		"Clean Code",
 		"The Clean Coder",
@@ -82,6 +92,7 @@ export const testConstants = {
 	],
 
 	BOOK_ONE: 0,
+	BOOK_TWO: 1,
 
 	BOOKS: [
 		{

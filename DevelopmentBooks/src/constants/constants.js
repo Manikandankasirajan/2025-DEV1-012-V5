@@ -23,6 +23,8 @@ export const constants = {
 	ELLIPSIS: "...",
 	TEST_ID_BOOK: "book",
 	INCREASE_BOOK_QTY_LABEL: "Increase Book Quantity",
+	DECREASE_BOOK_QTY_LABEL: "Decrease Book Quantity",
+	ONE: 1,
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -41,6 +43,8 @@ export const constants = {
 	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
 	TEST_ID_INCREASE_BOOK_QTY_BTN: "increaseBookQuantity",
 	TEST_ID_PLUS_ICON: "plusIcon",
+	TEST_ID_DECREASE_BOOK_QTY_BTN: "decreaseBookQuantity",
+	TEST_ID_MINUS_ICON: "minusIcon",
 
 	DISCOUNT_RULE: { 1: 0, 2: 5, 3: 10, 4: 20, 5: 25 },
 };

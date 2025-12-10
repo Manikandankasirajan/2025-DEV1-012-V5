@@ -33,6 +33,10 @@ const getIncreaseQtyBtn = () => {
 	return screen.getAllByTestId(testConstants.TEST_ID_INCREASE_BOOK_QTY_BTN);
 };
 
+const getDecreaseQtyBtn = () => {
+	return screen.getAllByTestId(testConstants.TEST_ID_DECREASE_BOOK_QTY_BTN);
+};
+
 describe("app component", () => {
 	let user;
 	beforeEach(() => {
@@ -365,6 +369,60 @@ describe("app component", () => {
 		);
 		expect(finalPriceValue).toHaveTextContent(
 			testConstants.FINAL_PRICE_FOR_TWO_COPY_OF_SAME_BOOK
+		);
+	});
+	it("should return totalprice-150,discountprice-5,finalprice-145 for purchase of two copies of same book and one copy of second book", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+		const addToCartBtnBook2 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK2
+		);
+
+		await user.click(addToCartBtnBook1);
+		await user.click(addToCartBtnBook2);
+		await user.click(getShowCartBtn());
+
+		const minusIcons = screen.getAllByTestId(testConstants.TEST_ID_MINUS_ICON)
+		expect(minusIcons).toHaveLength(2);
+
+		const totalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_TOTAL_PRICE_VALUE
+		);
+		const discountPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_DISCOUNT_PRICE_VALUE
+		);
+		const finalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_FINAL_PRICE_VALUE
+		);
+
+		const increaseBookQtyBtn = getIncreaseQtyBtn();
+		const decreaseBookQtyBtn = getDecreaseQtyBtn();
+
+		await user.click(increaseBookQtyBtn[testConstants.BOOK_ONE]);
+		await user.click(increaseBookQtyBtn[testConstants.BOOK_TWO]);
+
+		expect(totalPriceValue).toHaveTextContent(
+			testConstants.TOTAL_PRICE_FOR_TWO_COPY_OF_TWO_BOOK
+		);
+		expect(discountPriceValue).toHaveTextContent(
+			testConstants.DISCOUNT_PRICE_FOR_TWO_COPY_OF_TWO_BOOK
+		);
+		expect(finalPriceValue).toHaveTextContent(
+			testConstants.FINAL_PRICE_FOR_TWO_COPY_OF_TWO_BOOK
+		);
+
+		await user.click(decreaseBookQtyBtn[testConstants.BOOK_TWO]);
+
+		
+		expect(totalPriceValue).toHaveTextContent(
+			testConstants.TOTAL_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY
+		);
+		expect(discountPriceValue).toHaveTextContent(
+			testConstants.DISCOUNT_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY
+		);
+		expect(finalPriceValue).toHaveTextContent(
+			testConstants.FINAL_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY
 		);
 	});
 });

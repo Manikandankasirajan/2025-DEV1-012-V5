@@ -20,11 +20,18 @@ const CartProvider = ({ children }) => {
 			payload: bookId,
 		});
 	};
+	const decreaseBookQuantity = (bookId) => {
+		dispatch({
+			type: "DECREASE_BOOK_QUANTITY",
+			payload: bookId,
+		});
+	};
 
 	const contextValue = {
 		cart: state,
 		addToCart,
 		increaseBookQuantity,
+		decreaseBookQuantity,
 	};
 
 	return (
