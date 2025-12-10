@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { constants } from "../../constants/constants";
 import { FaBagShopping } from "react-icons/fa6";
 import PropTypes from "prop-types";
+import { cartContext } from "../../context/cartContext";
+import getTotalNoOfBooksInCart from "../../utils/getTotalNoOfBooksInCart";
+import CartQuantityBanner from "../CartQuantityBanner";
 
 const Header = ({ setShowCart }) => {
+	const { cart } = useContext(cartContext);
+	const totalNoOfBooksInCart = getTotalNoOfBooksInCart(cart);
 	return (
 		<header className="bg-slate-800">
 			<nav className="px-5 py-3 flex justify-between">
@@ -16,6 +21,9 @@ const Header = ({ setShowCart }) => {
 						onClick={() => setShowCart(true)}>
 						<FaBagShopping data-testid={constants.TEST_ID_BAG_ICON} />
 					</button>
+					{totalNoOfBooksInCart > constants.ZERO && (
+						<CartQuantityBanner value={totalNoOfBooksInCart} />
+					)}
 				</div>
 			</nav>
 		</header>

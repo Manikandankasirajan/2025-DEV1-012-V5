@@ -32,7 +32,10 @@ const findText = (value) => {
 describe("app component", () => {
 	let user;
 	beforeEach(() => {
-		useFetchBooks.mockReturnValue({ error: null });
+		useFetchBooks.mockReturnValue({
+			error: null,
+			bookList: testConstants.BOOKS,
+		});
 		render(<App />);
 		user = userEvent.setup();
 	});
@@ -69,6 +72,17 @@ describe("app component", () => {
 		await user.click(getCloseCartBtn());
 
 		expect(getCart()).not.toBeInTheDocument();
+	});
+	it("should render cart quantity banner in header when books added to cart", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+		await user.click(addToCartBtnBook1);
+		const cartQtyBanner = screen.queryByTestId(
+			testConstants.TEST_ID_CART_QTY_BANNER
+		);
+		expect(cartQtyBanner).toBeInTheDocument();
+		expect(cartQtyBanner.textContent).toEqual(testConstants.ONE);
 	});
 });
 

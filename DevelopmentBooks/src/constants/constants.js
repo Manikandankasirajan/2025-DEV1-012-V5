@@ -7,6 +7,8 @@ export const constants = {
 	API_URL: "http://localhost:3001/books",
 	NO_RESULTS_MESSAGE: "Book shelf is Empty.., Comeback later",
 	ZERO: 0,
+	CART_QTY_ONE: 1,
+	ADD_TO_CART_BTN_TEXT: "Add to Cart",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -17,4 +19,5 @@ export const constants = {
 	TEST_ID_BOOK_IMAGE: "bookImage",
 	TEST_ID_BOOK_TITLE: "bookTitle",
 	TEST_ID_BOOK_PRICE: "bookPrice",
+	TEST_ID_CART_QTY_BANNER: "cartQuantityBanner",
 };
