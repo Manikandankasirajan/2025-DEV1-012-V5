@@ -1,10 +1,11 @@
 import { constants } from "../constants/constants";
+import createOptimizedBookSets from "./createOptimizedBookSets";
 
 export default function createSetOfUniqueBooks(books) {
 	const booksCopy = JSON.parse(JSON.stringify(books));
 	const bookSetsPossible = Math.max(...booksCopy.map((book) => book.quantity));
 
-	const bookSets = [];
+	let bookSets = [];
 	for (let i = constants.ZERO; i < bookSetsPossible; i++) {
 		const currentSet = [];
 		booksCopy.forEach((book) => {
@@ -15,6 +16,8 @@ export default function createSetOfUniqueBooks(books) {
 		});
 		bookSets.push(currentSet);
 	}
+
+	bookSets = createOptimizedBookSets(bookSets);
 
 	return bookSets;
 }

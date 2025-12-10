@@ -79,6 +79,10 @@ export const testConstants = {
 	DISCOUNT_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY: "₹5.00",
 	FINAL_PRICE_FOR_THREE_BOOK_WIH_ONE_COPY: "₹145.00",
 
+	TOTAL_PRICE_FOR_EDGE_CASE: "₹400.00",
+	DISCOUNT_PRICE_FOR_EDGE_CASE: "₹80.00",
+	FINAL_PRICE_FOR_EDGE_CASE: "₹320.00",
+
 	BOOK_TITLES: [
 		"Clean Code",
 		"The Clean Coder",
@@ -96,6 +100,7 @@ export const testConstants = {
 
 	BOOK_ONE: 0,
 	BOOK_TWO: 1,
+	BOOK_THREE: 2,
 
 	BOOKS: [
 		{

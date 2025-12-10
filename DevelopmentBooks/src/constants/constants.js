@@ -27,6 +27,8 @@ export const constants = {
 	ONE: 1,
 	REMOVE_BOOK_FROM_CART_LABEL: "Remove Book from Cart",
 	CLEAR_CART_BTN_TEXT: "Clear Cart",
+	FIVE: 5,
+	THREE: 3,
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",

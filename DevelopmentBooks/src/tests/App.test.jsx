@@ -523,6 +523,55 @@ describe("app component", () => {
 		);
 		expect(discountMessage).toBeInTheDocument();
 	});
+	it("should return totalprice-400,discountprice-80,finalprice-320 for purchase of two copies of three books and one copy of two books", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+		const addToCartBtnBook2 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK2
+		);
+		const addToCartBtnBook3 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK3
+		);
+		const addToCartBtnBook4 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK4
+		);
+		const addToCartBtnBook5 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK5
+		);
+		await user.click(addToCartBtnBook1);
+		await user.click(addToCartBtnBook2);
+		await user.click(addToCartBtnBook3);
+		await user.click(addToCartBtnBook4);
+		await user.click(addToCartBtnBook5);
+		await user.click(getShowCartBtn());
+
+		const increaseBookQtyBtn = getIncreaseQtyBtn();
+
+		await user.click(increaseBookQtyBtn[testConstants.BOOK_ONE]);
+		await user.click(increaseBookQtyBtn[testConstants.BOOK_TWO]);
+		await user.click(increaseBookQtyBtn[testConstants.BOOK_THREE]);
+
+		const totalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_TOTAL_PRICE_VALUE
+		);
+		const discountPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_DISCOUNT_PRICE_VALUE
+		);
+		const finalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_FINAL_PRICE_VALUE
+		);
+
+		expect(totalPriceValue).toHaveTextContent(
+			testConstants.TOTAL_PRICE_FOR_EDGE_CASE
+		);
+		expect(discountPriceValue).toHaveTextContent(
+			testConstants.DISCOUNT_PRICE_FOR_EDGE_CASE
+		);
+		expect(finalPriceValue).toHaveTextContent(
+			testConstants.FINAL_PRICE_FOR_EDGE_CASE
+		);
+	});
 });
 
 describe("api requests", () => {
