@@ -277,6 +277,49 @@ describe("app component", () => {
 			testConstants.FINAL_PRICE_FOR_FOUR_BOOK
 		);
 	});
+	it("should return totalprice-250,discountprice-62.50,finalprice-187.50 for five book purchase", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+		const addToCartBtnBook2 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK2
+		);
+		const addToCartBtnBook3 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK3
+		);
+		const addToCartBtnBook4 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK4
+		);
+		const addToCartBtnBook5 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK5
+		);
+		await user.click(addToCartBtnBook1);
+		await user.click(addToCartBtnBook2);
+		await user.click(addToCartBtnBook3);
+		await user.click(addToCartBtnBook4);
+		await user.click(addToCartBtnBook5);
+		await user.click(getShowCartBtn());
+
+		const totalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_TOTAL_PRICE_VALUE
+		);
+		const discountPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_DISCOUNT_PRICE_VALUE
+		);
+		const finalPriceValue = screen.getByTestId(
+			testConstants.TEST_ID_FINAL_PRICE_VALUE
+		);
+
+		expect(totalPriceValue).toHaveTextContent(
+			testConstants.TOTAL_PRICE_FOR_FIVE_BOOK
+		);
+		expect(discountPriceValue).toHaveTextContent(
+			testConstants.DISCOUNT_PRICE_FOR_FIVE_BOOK
+		);
+		expect(finalPriceValue).toHaveTextContent(
+			testConstants.FINAL_PRICE_FOR_FIVE_BOOK
+		);
+	});
 });
 
 describe("api requests", () => {

@@ -23,6 +23,12 @@
 			"imgSrc": "./src/assets/Kata_DevelopmentBooks_TDD.jpeg",
 			"title": "Test Driven Development by Example",
 			"price": 50
+		},
+		{
+			"id": "12eab0be-4a7e-4ba3-a27c-be017c13e6e0",
+			"imgSrc": "./src/assets/Kata_DevelopmentBooks_Refactoring.jpeg",
+			"title": "Working Effectively With Legacy Code",
+			"price": 50
 		}
 	]
 }

@@ -33,6 +33,7 @@ export const testConstants = {
 	TEST_ID_ADD_TO_CART_BTN_BOOK2: "TEST_ID_The Clean Coder",
 	TEST_ID_ADD_TO_CART_BTN_BOOK3: "TEST_ID_Clean Architecture",
 	TEST_ID_ADD_TO_CART_BTN_BOOK4: "TEST_ID_Test Driven Development by Example",
+	TEST_ID_ADD_TO_CART_BTN_BOOK5: "TEST_ID_Working Effectively With Legacy Code",
 
 	TEST_ID_TOTAL_PRICE_LABEL: "TEST_ID_PRICE_TYPE_Total Price",
 	TEST_ID_DISCOUNT_PRICE_LABEL: "TEST_ID_PRICE_TYPE_Discount Price",
@@ -54,6 +55,9 @@ export const testConstants = {
 	TOTAL_PRICE_FOR_FOUR_BOOK: "₹200.00",
 	DISCOUNT_PRICE_FOR_FOUR_BOOK: "₹40.00",
 	FINAL_PRICE_FOR_FOUR_BOOK: "₹160.00",
+	TOTAL_PRICE_FOR_FIVE_BOOK: "₹250.00",
+	DISCOUNT_PRICE_FOR_FIVE_BOOK: "₹62.50",
+	FINAL_PRICE_FOR_FIVE_BOOK: "₹187.50",
 
 	BOOK_ONE: 0,
 
@@ -80,6 +84,12 @@ export const testConstants = {
 			id: "87a91bcc-e37f-4251-afd8-33d060b93167",
 			imgSrc: "./src/assets/Kata_DevelopmentBooks_TDD.jpeg",
 			title: "Test Driven Development by Example",
+			price: 50,
+		},
+		{
+			id: "12eab0be-4a7e-4ba3-a27c-be017c13e6e0",
+			imgSrc: "./src/assets/Kata_DevelopmentBooks_Refactoring.jpeg",
+			title: "Working Effectively With Legacy Code",
 			price: 50,
 		},
 	],
