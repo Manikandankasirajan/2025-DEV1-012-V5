@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { FaXmark } from "react-icons/fa6";
 import { cartContext } from "../../context/cartContext";
 import EmptyCart from "../EmptyCart";
+import CartSummary from "../CartSummary";
 
 const Cart = ({ setShowCart }) => {
 	const { cart } = useContext(cartContext);
@@ -22,7 +23,7 @@ const Cart = ({ setShowCart }) => {
 					data-testid={constants.TEST_ID_CLOSE_CART_BTN}>
 					<FaXmark data-testid={constants.TEST_ID_XMARK_ICON} />
 				</button>
-				{isCartEmpty() && <EmptyCart />}
+				{isCartEmpty() ? <EmptyCart /> : <CartSummary />}
 			</section>
 		</div>
 	);

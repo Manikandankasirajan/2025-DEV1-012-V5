@@ -106,13 +106,32 @@ describe("app component", () => {
 		const emptyCartMessage = await screen.findByText(
 			testConstants.EMPTY_CART_MESSAGE
 		);
-		
+
 		expect(emptyCart).toBeInTheDocument();
 		expect(emptyCartImage).toHaveAttribute(
 			"src",
 			testConstants.EMPTY_CART_IMAGE
 		);
 		expect(emptyCartMessage).toBeInTheDocument();
+	});
+	it("should render cart summary with book details when books added to cart", async () => {
+		const addToCartBtnBook1 = screen.getByTestId(
+			testConstants.TEST_ID_ADD_TO_CART_BTN_BOOK1
+		);
+		await user.click(addToCartBtnBook1);
+		await user.click(getShowCartBtn());
+
+		const cartItemTitle = screen.getByTestId(
+			testConstants.TEST_ID_CART_ITEM_TITLE
+		);
+		const cartItemQty = screen.getByTestId(testConstants.TEST_ID_CART_ITEM_QTY);
+		const cartItemPrice = screen.getByTestId(
+			testConstants.TEST_ID_CART_ITEM_PRICE
+		);
+
+		expect(cartItemTitle).toHaveTextContent(testConstants.BOOK_ONE_TITLE);
+		expect(cartItemQty).toHaveTextContent(testConstants.BOOK_ONE_QTY);
+		expect(cartItemPrice).toHaveTextContent(testConstants.BOOK_ONE_PRICE);
 	});
 });
 

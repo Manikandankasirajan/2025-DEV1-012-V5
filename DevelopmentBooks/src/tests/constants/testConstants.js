@@ -9,6 +9,9 @@ export const testConstants = {
 	CHECK_MARK: "\u2713",
 	EMPTY_CART_IMAGE: "./src/assets/add-to-cart.png",
 	EMPTY_CART_MESSAGE: "Your cart is Empty...",
+	BOOK_ONE_TITLE: "Clean Code",
+	BOOK_ONE_QTY: "1",
+	BOOK_ONE_PRICE: "₹50.00",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -22,6 +25,9 @@ export const testConstants = {
 	TEST_ID_CART_QTY_BANNER: "cartQuantityBanner",
 	TEST_ID_EMPTY_CART: "emptyCart",
 	TEST_ID_EMPTY_CART_IMAGE: "emptyCartImage",
+	TEST_ID_CART_ITEM_TITLE: "cartItemTitle",
+	TEST_ID_CART_ITEM_QTY: "cartItemQuantity",
+	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
 
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
 
