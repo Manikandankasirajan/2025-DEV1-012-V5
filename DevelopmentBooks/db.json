@@ -5,6 +5,12 @@
 			"imgSrc": "./src/assets/Kata_DevelopmentBooks_CleanCode.png",
 			"title": "Clean Code",
 			"price": 50
+		},
+		{
+			"id": "d701c4e5-1def-46d7-a3d7-957355fe05fe",
+			"imgSrc": "./src/assets/Kata_DevelopmentBooks_CleanCoder.png",
+			"title": "The Clean Coder",
+			"price": 50
 		}
 	]
 }

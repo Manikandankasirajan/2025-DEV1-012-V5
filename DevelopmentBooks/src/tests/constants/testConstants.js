@@ -30,6 +30,7 @@ export const testConstants = {
 	TEST_ID_CART_ITEM_PRICE: "cartItemPrice",
 
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
+	TEST_ID_ADD_TO_CART_BTN_BOOK2: "TEST_ID_The Clean Coder",
 
 	TEST_ID_TOTAL_PRICE_LABEL: "TEST_ID_PRICE_TYPE_Total Price",
 	TEST_ID_DISCOUNT_PRICE_LABEL: "TEST_ID_PRICE_TYPE_Discount Price",
@@ -42,6 +43,9 @@ export const testConstants = {
 	TOTAL_PRICE_FOR_ONE_BOOK: "₹50.00",
 	DISCOUNT_PRICE_FOR_ONE_BOOK: "₹0.00",
 	FINAL_PRICE_FOR_ONE_BOOK: "₹50.00",
+	TOTAL_PRICE_FOR_TWO_BOOK: "₹100.00",
+	DISCOUNT_PRICE_FOR_TWO_BOOK: "₹5.00",
+	FINAL_PRICE_FOR_TWO_BOOK: "₹95.00",
 
 	BOOK_ONE: 0,
 
@@ -50,6 +54,12 @@ export const testConstants = {
 			id: "11d03f1a-66fa-46b1-a473-6a9e24090fb4",
 			imgSrc: "./src/assets/Kata_DevelopmentBooks_CleanCode.png",
 			title: "Clean Code",
+			price: 50,
+		},
+		{
+			id: "d701c4e5-1def-46d7-a3d7-957355fe05fe",
+			imgSrc: "./src/assets/Kata_DevelopmentBooks_CleanCoder.png",
+			title: "The Clean Coder",
 			price: 50,
 		},
 	],

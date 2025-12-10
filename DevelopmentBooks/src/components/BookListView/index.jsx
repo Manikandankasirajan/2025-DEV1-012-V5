@@ -15,9 +15,11 @@ const BookListView = () => {
 			{isBookListEmpty() ? (
 				<p className="mt-48 text-center">{constants.NO_RESULTS_MESSAGE}</p>
 			) : (
-				bookList.map((bookDetails) => {
-					return <Book key={bookDetails.id} bookDetails={bookDetails} />;
-				})
+				<div className="px-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+					{bookList.map((bookDetails) => {
+						return <Book key={bookDetails.id} bookDetails={bookDetails} />;
+					})}
+				</div>
 			)}
 		</main>
 	);
