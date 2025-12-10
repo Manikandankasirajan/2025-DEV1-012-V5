@@ -7,6 +7,8 @@ export const testConstants = {
 	EMPTY_ARRAY: [],
 	ONE: "1",
 	CHECK_MARK: "\u2713",
+	EMPTY_CART_IMAGE: "./src/assets/add-to-cart.png",
+	EMPTY_CART_MESSAGE: "Your cart is Empty...",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -18,6 +20,8 @@ export const testConstants = {
 	TEST_ID_BOOK_TITLE: "bookTitle",
 	TEST_ID_BOOK_PRICE: "bookPrice",
 	TEST_ID_CART_QTY_BANNER: "cartQuantityBanner",
+	TEST_ID_EMPTY_CART: "emptyCart",
+	TEST_ID_EMPTY_CART_IMAGE: "emptyCartImage",
 
 	TEST_ID_ADD_TO_CART_BTN_BOOK1: "TEST_ID_Clean Code",
 

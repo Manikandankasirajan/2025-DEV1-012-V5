@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { constants } from "../../constants/constants";
 import PropTypes from "prop-types";
 import { FaXmark } from "react-icons/fa6";
+import { cartContext } from "../../context/cartContext";
+import EmptyCart from "../EmptyCart";
 
 const Cart = ({ setShowCart }) => {
+	const { cart } = useContext(cartContext);
+	const isCartEmpty = () => cart.length === constants.ZERO;
 	return (
 		<div
 			className="w-screen h-screen fixed top-0 left-0 z-40 bg-slate-400/50 flex justify-end"
@@ -18,6 +22,7 @@ const Cart = ({ setShowCart }) => {
 					data-testid={constants.TEST_ID_CLOSE_CART_BTN}>
 					<FaXmark data-testid={constants.TEST_ID_XMARK_ICON} />
 				</button>
+				{isCartEmpty() && <EmptyCart />}
 			</section>
 		</div>
 	);

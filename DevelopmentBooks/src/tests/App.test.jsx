@@ -92,6 +92,28 @@ describe("app component", () => {
 		expect(addToCartBtnBook1).toBeDisabled();
 		expect(addToCartBtnBook1).toHaveTextContent(testConstants.CHECK_MARK);
 	});
+	it("should render empty cart with image and message when cart is empty", async () => {
+		const cartQtyBanner = screen.queryByTestId(
+			testConstants.TEST_ID_CART_QTY_BANNER
+		);
+		expect(cartQtyBanner).not.toBeInTheDocument();
+		await user.click(getShowCartBtn());
+
+		const emptyCart = screen.getByTestId(testConstants.TEST_ID_EMPTY_CART);
+		const emptyCartImage = screen.getByTestId(
+			testConstants.TEST_ID_EMPTY_CART_IMAGE
+		);
+		const emptyCartMessage = await screen.findByText(
+			testConstants.EMPTY_CART_MESSAGE
+		);
+		
+		expect(emptyCart).toBeInTheDocument();
+		expect(emptyCartImage).toHaveAttribute(
+			"src",
+			testConstants.EMPTY_CART_IMAGE
+		);
+		expect(emptyCartMessage).toBeInTheDocument();
+	});
 });
 
 describe("api requests", () => {

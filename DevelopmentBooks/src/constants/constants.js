@@ -10,6 +10,9 @@ export const constants = {
 	CART_QTY_ONE: 1,
 	ADD_TO_CART_BTN_TEXT: "Add to Cart",
 	CHECK_MARK: "\u2713",
+	EMPTY_CART_IMAGE: "./src/assets/add-to-cart.png",
+	EMPTY_CART_IMAGE_ALT_TEXT: "Empty Cart Image",
+	EMPTY_CART_MESSAGE: "Your cart is Empty...",
 
 	TEST_ID_SHOW_CART_BTN: "showCartBtn",
 	TEST_ID_BAG_ICON: "bagIcon",
@@ -21,4 +24,6 @@ export const constants = {
 	TEST_ID_BOOK_TITLE: "bookTitle",
 	TEST_ID_BOOK_PRICE: "bookPrice",
 	TEST_ID_CART_QTY_BANNER: "cartQuantityBanner",
+	TEST_ID_EMPTY_CART: "emptyCart",
+	TEST_ID_EMPTY_CART_IMAGE: "emptyCartImage",
 };
